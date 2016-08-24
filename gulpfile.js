@@ -52,7 +52,7 @@ gulp.task("pug", () => {
             errorHandler: notify.onError("Error: <%= error.message %>")
         }))
         .pipe(pug(option))
-        .pipe(gulp.dest("./"))
+        .pipe(gulp.dest("./public"))
 });
 
 //ブラウザリロード処理
