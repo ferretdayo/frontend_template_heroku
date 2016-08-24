@@ -26,8 +26,8 @@ gulp.task('browser-sync', () => {
     });
     //ファイルの監視
     //以下のファイルが変わったらリロードする
-	gulp.watch("./js/**/*.js",     ['reload']);
-    gulp.watch("./*.html",         ['reload']);
+	gulp.watch("./public/js/**/*.js",     ['reload']);
+    gulp.watch("./public/*.html",         ['reload']);
 });
 
 //sassをcssに変換
@@ -37,7 +37,7 @@ gulp.task("sass", () => {
             errorHandler: notify.onError("Error: <%= error.message %>")
         }))
 		.pipe(sass())
-		.pipe(gulp.dest("./css"))
+		.pipe(gulp.dest("./public/css"))
         //reloadせずにinjectする
         .pipe(browserSync.stream())
 });
