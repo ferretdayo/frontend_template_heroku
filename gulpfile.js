@@ -21,7 +21,7 @@ gulp.task('watch', () => {
 gulp.task('browser-sync', () => {
     browserSync({
         server: {
-            baseDir: "./"   //サーバとなるrootディレクトリ
+            baseDir: "./public"   //サーバとなるrootディレクトリ
         }
     });
     //ファイルの監視
